@@ -2,9 +2,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Corridas Compartilhadas</title>
+<title>${head}</title>
 </head>
 <body>
-	It works!! ${variable} ${linkTo[IndexController].index}
+	<h2>${head}</h2>
 </body>
 </html>

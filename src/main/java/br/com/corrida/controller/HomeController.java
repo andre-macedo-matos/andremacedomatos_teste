@@ -7,24 +7,24 @@ import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Result;
 
 @Controller
-public class IndexController {
+public class HomeController {
 
 	private final Result result;
 
 	/**
 	 * @deprecated CDI eyes only
 	 */
-	protected IndexController() {
+	protected HomeController() {
 		this(null);
 	}
 	
 	@Inject
-	public IndexController(Result result) {
+	public HomeController(Result result) {
 		this.result = result;
 	}
 
-	@Path("/")
-	public void index() {
-		result.include("variable", "VRaptor!");
+	@Path({"/", "/home"})
+	public void home() {
+		result.include("head", "Corridas Compartilhadas!");
 	}
 }
