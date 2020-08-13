@@ -28,8 +28,8 @@
 			<th>Nome</th>
 			<th>Data de Nascimento</th>
 			<th>CPF</th>
-			<th>Modelo do Carro</th>
 			<th>Sexo</th>
+			<th>Modelo do Carro</th>
 			<th>Status</th>
 		</tr>
 

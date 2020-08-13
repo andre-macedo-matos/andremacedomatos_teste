@@ -5,15 +5,15 @@ import java.util.List;
 import javax.inject.Inject;
 
 import br.com.corrida.interfaces.CorridaDB;
-import br.com.corrida.interfaces.MotoristaDAO;
+import br.com.corrida.interfaces.DAO;
 import br.com.corrida.model.Motorista;
 
 public class CorridaDatabase implements CorridaDB {
 	
-	private final MotoristaDAO dao;
+	private final DAO dao;
 	
 	@Inject
-	public CorridaDatabase(MotoristaDAO dao) {
+	public CorridaDatabase(DAO dao) {
 		this.dao = dao;
 	}
 	
@@ -28,9 +28,9 @@ public class CorridaDatabase implements CorridaDB {
 	}
 
 	@Override
-	public List<Motorista> read(Long id) {
+	public List<Motorista> readAll() {
 		// TODO Auto-generated method stub
-		return this.dao.read(id);
+		return this.dao.readAll();
 	}
 
 	@Override
