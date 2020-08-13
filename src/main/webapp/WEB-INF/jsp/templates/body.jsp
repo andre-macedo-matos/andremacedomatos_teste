@@ -10,13 +10,11 @@
 </head>
 <body>
 	<script>
-		function validateform() {
+		function validatePassageiroForm() {
 			var nome = document.form.nome.value;
 			var data = document.form.data.value;
 			var cpf = document.form.cpf.value;
 			var sexo = document.form.sexo.value;
-			var status = document.form.status.value;
-			var modelo = document.form.modelo.value;
 				
 			if(isFieldEmptyOrNull(nome)) {
 				alert("Por Favor, preencha nome");
@@ -42,6 +40,17 @@
 				return false;
 			}
 			
+			return true;
+		}
+	
+		function validateMotoristaForm() {
+			var status = document.form.status.value;
+			var modelo = document.form.modelo.value;
+			
+			if(!validatePassageiroForm() ) {
+				return false;
+			}
+			
 			if(isFieldEmptyOrNull(status)) {
 				alert("Por Favor, preencha status");
 				document.form.status.focus();
@@ -53,6 +62,7 @@
 				document.form.modelo.focus();
 				return false;
 			}
+		
 		}	
 		
 		function valida_cpf(cpf) {
@@ -110,13 +120,13 @@
 				var month = parseInt(dateArray[1]);
 				var year = parseInt(dateArray[2]);
 				  
+				if(!isOfAge(year))
+					return false;
+				
 				var daysOfMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 				if (month == 1 || month > 2) {
 					if (day > daysOfMonth[month - 1])
 				  		return false;
-				
-				if(!isOfAge(year))
-					return false;
 					
 				if (month == 2) 
 					return isValidFebuary(day, year);

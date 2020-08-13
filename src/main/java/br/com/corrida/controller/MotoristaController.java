@@ -7,14 +7,14 @@ import javax.inject.Inject;
 import br.com.caelum.vraptor.Controller;
 import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Result;
-import br.com.corrida.interfaces.CorridaDB;
+import br.com.corrida.interfaces.MotoristaDB;
 import br.com.corrida.model.Motorista;
 
 @Controller
 public class MotoristaController {
 	
 	private final Result result;
-	private final CorridaDB db;
+	private final MotoristaDB db;
 	/**
 	 * @deprecated CDI eyes only
 	 */
@@ -23,7 +23,7 @@ public class MotoristaController {
 	}
 	
 	@Inject
-	public MotoristaController(Result result, CorridaDB db) {
+	public MotoristaController(Result result, MotoristaDB db) {
 		this.result = result;
 		this.db = db;
 	}

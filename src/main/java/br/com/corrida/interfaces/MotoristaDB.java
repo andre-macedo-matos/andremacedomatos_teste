@@ -2,13 +2,10 @@ package br.com.corrida.interfaces;
 
 import java.util.List;
 
-import javax.transaction.Transactional;
-
 import br.com.corrida.model.Motorista;
 
-@Transactional
-public interface DAO {
-	
+public interface MotoristaDB {
+
 	void create(Motorista motorista);
 	
 	List<Motorista> readAll();

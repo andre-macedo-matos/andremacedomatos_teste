@@ -4,21 +4,21 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import br.com.corrida.interfaces.CorridaDB;
-import br.com.corrida.interfaces.DAO;
+import br.com.corrida.interfaces.MotoristaDB;
+import br.com.corrida.interfaces.MotoristaDAO;
 import br.com.corrida.model.Motorista;
 
-public class CorridaDatabase implements CorridaDB {
+public class MotoristaDatabase implements MotoristaDB {
 	
-	private final DAO dao;
+	private final MotoristaDAO dao;
 	
 	@Inject
-	public CorridaDatabase(DAO dao) {
+	public MotoristaDatabase(MotoristaDAO dao) {
 		this.dao = dao;
 	}
 	
 	@Deprecated
-	public CorridaDatabase() {
+	public MotoristaDatabase() {
 		this(null);
 	}
 
