@@ -3,9 +3,9 @@
 
 <div>
 	<div>
-		<form name="form" method="post" action="${linkTo[PassageiroController].create}" onsubmit="return validatePassageiroForm()" >
-			<input type="hidden" name="id" value="${passageiro.id}"/><br /> 
-			<label for="nome">Nome:</label> <input id="nome" type="text" name="passageiro.nome" /><br /> 
+		<form name = "form" method = "post" action="${linkTo[PassageiroController].create}" onsubmit="return validatePassageiroForm()" >
+			<input type = "hidden" name="id" value="${passageiro.id}"/><br /> 
+			<label for = "nome">Nome:</label> <input id="nome" type="text" name="passageiro.nome" /><br /> 
 			<label for = "data">Data de Nascimento:</label> <input id = "data" type = "text" name = "passageiro.dataNascimento"/><br />
 			<label for = "cpf">CPF:</label> <input id = "cpf" type = "text" name = "passageiro.cpf"/><br />
 			<label for = "sexo">Sexo:</label>

@@ -62,7 +62,6 @@
 				document.form.modelo.focus();
 				return false;
 			}
-		
 		}	
 		
 		function valida_cpf(cpf) {
@@ -180,6 +179,30 @@
 		
 		function isFieldEmptyOrNull(field) {
 			return field == null || field == ""; 
+		}
+		
+		function validateCorridaForm() {
+			var motoristaId = document.form.motoristaId.value;
+			var passageiroId = document.form.passageiroId.value;
+			var valorCorrida = document.form.valorCorrida.value;
+			
+			if(isFieldEmptyOrNull(motoristaId) || motoristaId == -1) {
+				alert("Por Favor, preencha Motorista");
+				document.form.motoristaId.focus();
+				return false;
+			}
+			if(isFieldEmptyOrNull(passageiroId) || passageiroId == -1) {
+				alert("Por Favor, preencha Passageiro");
+				document.form.motoristaId.focus();
+				return false;
+			}
+			
+			var regex = /^[1-9]\d*(?:[,.]\d{0,2})?$/;
+			if(isFieldEmptyOrNull(valorCorrida) || !regex.test(valorCorrida)) {
+				alert("Por Favor, preencha Valor valido");
+				document.form.valorCorrida.focus();
+				return false;
+			}
 		}
 	</script>
 

@@ -33,6 +33,20 @@ public class JPAPassageiroDAO implements PassageiroDAO {
 		
 		this.manager.getTransaction().commit();
 	}
+	
+	@Override
+	public Passageiro readBy(Long id) {
+		this.manager.getTransaction().begin();
+		
+		Passageiro passageiro = this.manager
+				.createQuery("select p from Passageiro p where p.id = :id", Passageiro.class)
+				.setParameter("id", id)
+				.getSingleResult( );
+		
+		this.manager.getTransaction().commit();
+		
+		return passageiro;
+	}
 
 	@Override
 	public List<Passageiro> readAll() {

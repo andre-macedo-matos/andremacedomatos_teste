@@ -6,6 +6,8 @@
 	version="2.0">
 	<persistence-unit name="default">
 		<class>br.com.corrida.model.Motorista</class>
+		<class>br.com.corrida.model.Passageiro</class>
+		<class>br.com.corrida.model.Corrida</class>
 		<properties>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect" />
 			<property name="hibernate.connection.url" value="jdbc:oracle:thin:@192.168.0.13:1521/XE" />

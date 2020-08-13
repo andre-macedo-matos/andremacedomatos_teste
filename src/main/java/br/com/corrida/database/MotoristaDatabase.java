@@ -37,4 +37,9 @@ public class MotoristaDatabase implements MotoristaDB {
 		this.dao.update(id, status);
 	}
 
+	@Override
+	public Motorista readBy(Long id) {
+		return this.dao.readBy(id);
+	}
+
 }

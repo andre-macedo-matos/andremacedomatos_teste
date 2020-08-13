@@ -4,14 +4,14 @@ import java.util.List;
 
 import javax.transaction.Transactional;
 
+import br.com.corrida.model.Corrida;
+import br.com.corrida.model.Motorista;
 import br.com.corrida.model.Passageiro;
 
 @Transactional
-public interface PassageiroDAO {
+public interface CorridaDAO {
 
-	void create(Passageiro passageiro);
+	void create(Corrida Corrida);
 	
-	Passageiro readBy(Long id);
-	
-	List<Passageiro> readAll();
+	List<Corrida> readAll();
 }

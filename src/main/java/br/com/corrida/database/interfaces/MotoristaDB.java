@@ -10,5 +10,7 @@ public interface MotoristaDB {
 	
 	List<Motorista> readAll();
 	
+	Motorista readBy(Long id);
+	
 	void update(Long id, Character status);
 }

@@ -46,6 +46,20 @@ public class JPAMotoristaDAO implements MotoristaDAO {
 		
 		return motoristas;
 	}
+	
+	@Override
+	public Motorista readBy(Long id) {
+		this.manager.getTransaction().begin();
+		
+		Motorista motorista = this.manager
+				.createQuery("select m from Motorista m where m.id = :id", Motorista.class)
+				.setParameter("id", id)
+				.getSingleResult( );
+		
+		this.manager.getTransaction().commit();
+		
+		return motorista;
+	}
 
 	@Override
 	public void update(Long id, Character status) {
@@ -58,5 +72,6 @@ public class JPAMotoristaDAO implements MotoristaDAO {
 		
 		this.manager.getTransaction().commit();
 	}
+
 
 }

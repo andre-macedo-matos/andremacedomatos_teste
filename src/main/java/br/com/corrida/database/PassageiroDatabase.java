@@ -26,11 +26,14 @@ public class PassageiroDatabase implements PassageiroDB {
 	public void create(Passageiro passageiro) {
 		this.dao.create(passageiro);
 	}
+	
+	@Override
+	public Passageiro readBy(Long id) {
+		return this.dao.readBy(id);
+	}
 
 	@Override
 	public List<Passageiro> readAll() {
 		return this.dao.readAll();
 	}
-
-
 }
