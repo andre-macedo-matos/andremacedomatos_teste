@@ -110,11 +110,14 @@
 				var month = parseInt(dateArray[1]);
 				var year = parseInt(dateArray[2]);
 				  
-				var daysOfMonth = [31,28,31,30,31,30,31,31,30,31,30,31];
+				var daysOfMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 				if (month == 1 || month > 2) {
 					if (day > daysOfMonth[month - 1])
 				  		return false;
-				  
+				
+				if(!isOfAge(year))
+					return false;
+					
 				if (month == 2) 
 					return isValidFebuary(day, year);
 				}
@@ -140,6 +143,11 @@
 				pdate = data.split('-');	
 			
 			return pdate;
+		}
+		
+		function isOfAge(year) {
+			var currentYear = new Date().getFullYear(); 
+			return currentYear - year >= 18;
 		}
 		
 		function  isValidDateFormat(data) {

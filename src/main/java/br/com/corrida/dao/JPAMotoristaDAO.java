@@ -24,17 +24,27 @@ public class JPAMotoristaDAO implements MotoristaDAO {
 
 	@Override
 	public void create(Motorista motorista) {
+		this.manager.getTransaction().begin();
+		
 		if(motorista.getId() == null)
 			this.manager.persist(motorista);
 		else
 			this.manager.merge(motorista);
+		
+		this.manager.getTransaction().commit();
 	}
 
 	@Override
 	public List<Motorista> read(Long id) {
-		return this.manager
-				.createQuery("select m from motorista m", Motorista.class)
+		this.manager.getTransaction().begin();
+		
+		List<Motorista> motoristas = this.manager
+				.createQuery("select m from Motorista m", Motorista.class)
 				.getResultList();
+		
+		this.manager.getTransaction().commit();
+		
+		return motoristas;
 	}
 
 	@Override
