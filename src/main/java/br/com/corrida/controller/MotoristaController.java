@@ -35,8 +35,12 @@ public class MotoristaController {
 	}
 	
 	public void create(Motorista motorista) {
-		System.out.println(motorista.toString());
 		db.create(motorista);
 		result.redirectTo(this).read( );
+	}
+	
+	public void update(Long id, Character status, Result result) {
+		db.update(id, status);
+		result.redirectTo(this).read();
 	}
 }

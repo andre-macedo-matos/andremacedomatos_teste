@@ -41,6 +41,11 @@
 				<td>${motorista.sexo}</td>
 				<td>${motorista.modeloCarro}</td>
 				<td>${motorista.status eq 'A'.charAt(0) ? 'Ativo' : 'Inativo'}</td>
+				<td>	
+					<a href = "${linkTo[MotoristaController].update}?id=${motorista.id}&status=${motorista.status ne 'A'.charAt(0) ? 'A' : 'I'}">
+						${motorista.status ne 'A'.charAt(0) ? 'Ativa?' : 'Inativa?'}
+					</a>
+				</td>
 			</tr>
 		</c:forEach>
 	</table>

@@ -13,5 +13,5 @@ public interface DAO {
 	
 	List<Motorista> readAll();
 	
-	void update(Long id);
+	void update(Long id, Character status);
 }

@@ -29,13 +29,12 @@ public class CorridaDatabase implements CorridaDB {
 
 	@Override
 	public List<Motorista> readAll() {
-		// TODO Auto-generated method stub
 		return this.dao.readAll();
 	}
 
 	@Override
-	public void update(Long id) {
-		this.dao.update(id);
+	public void update(Long id, Character status) {
+		this.dao.update(id, status);
 	}
 
 }

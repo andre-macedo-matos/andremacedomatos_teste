@@ -48,9 +48,15 @@ public class JPAMotoristaDAO implements DAO {
 	}
 
 	@Override
-	public void update(Long id) {
-		// TODO Auto-generated method stub
+	public void update(Long id, Character status) {
+		this.manager.getTransaction().begin();
 		
+		this.manager.createNativeQuery("update Motorista m set m.status = :novoStatus where m.id = :id")
+			.setParameter("novoStatus", status)
+			.setParameter("id", id.intValue())
+			.executeUpdate();
+		
+		this.manager.getTransaction().commit();
 	}
 
 }

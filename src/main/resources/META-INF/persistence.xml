@@ -12,7 +12,7 @@
 			<property name="hibernate.connection.driver_class" value="oracle.jdbc.driver.OracleDriver" />
 			<property name="hibernate.connection.username" value="system" />
 			<property name="hibernate.connection.password" value="adm" />
-			<property name="hibernate.hbm2ddl.auto" value="create-drop" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
 		</properties>
 	</persistence-unit>
 </persistence>
