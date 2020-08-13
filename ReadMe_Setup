@@ -1,0 +1,9 @@
+Projeto Web Java com banco Oracle8 para persistência.
+Gerenciador de dependências Maven e framework web VRaptor 4 com servidor tomcat.
+
+Para rodar o sistema:
+Instalar Java 8 , maven e 
+      Oracle8 
+          link:   jdbc:oracle:thin:@192.168.0.13:1521/XE
+          user:  system
+          senha: adm
