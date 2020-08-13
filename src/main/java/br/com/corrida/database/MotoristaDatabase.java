@@ -4,8 +4,8 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import br.com.corrida.interfaces.MotoristaDB;
-import br.com.corrida.interfaces.MotoristaDAO;
+import br.com.corrida.dao.interfaces.MotoristaDAO;
+import br.com.corrida.database.interfaces.MotoristaDB;
 import br.com.corrida.model.Motorista;
 
 public class MotoristaDatabase implements MotoristaDB {

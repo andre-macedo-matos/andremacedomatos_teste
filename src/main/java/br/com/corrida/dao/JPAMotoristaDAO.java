@@ -5,7 +5,7 @@ import java.util.List;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 
-import br.com.corrida.interfaces.MotoristaDAO;
+import br.com.corrida.dao.interfaces.MotoristaDAO;
 import br.com.corrida.model.Motorista;
 
 public class JPAMotoristaDAO implements MotoristaDAO {

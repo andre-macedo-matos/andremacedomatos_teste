@@ -7,7 +7,7 @@ import javax.inject.Inject;
 import br.com.caelum.vraptor.Controller;
 import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Result;
-import br.com.corrida.interfaces.MotoristaDB;
+import br.com.corrida.database.interfaces.MotoristaDB;
 import br.com.corrida.model.Motorista;
 
 @Controller

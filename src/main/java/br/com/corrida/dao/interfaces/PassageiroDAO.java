@@ -1,4 +1,4 @@
-package br.com.corrida.interfaces;
+package br.com.corrida.dao.interfaces;
 
 import java.util.List;
 

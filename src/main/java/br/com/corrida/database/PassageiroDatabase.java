@@ -4,8 +4,8 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import br.com.corrida.interfaces.PassageiroDAO;
-import br.com.corrida.interfaces.PassageiroDB;
+import br.com.corrida.dao.interfaces.PassageiroDAO;
+import br.com.corrida.database.interfaces.PassageiroDB;
 import br.com.corrida.model.Passageiro;
 
 public class PassageiroDatabase implements PassageiroDB {

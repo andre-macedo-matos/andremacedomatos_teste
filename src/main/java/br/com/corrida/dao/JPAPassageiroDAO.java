@@ -5,7 +5,7 @@ import java.util.List;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 
-import br.com.corrida.interfaces.PassageiroDAO;
+import br.com.corrida.dao.interfaces.PassageiroDAO;
 import br.com.corrida.model.Passageiro;
 
 public class JPAPassageiroDAO implements PassageiroDAO {
